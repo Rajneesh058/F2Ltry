@@ -158,7 +158,7 @@ async def help_handler(bot, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                            InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
                         ]
                     ]
                 )
@@ -193,37 +193,37 @@ async def about_handler(bot, message):
             Var.BIN_CHANNEL,
             f"#NEW_USER: \n\nNew User [{message.from_user.first_name}](tg://user?id={message.from_user.id}) Started !!"
         )
-     if Var.UPDATES_CHANNEL is not None:
-         try:
-             user = await b.get_chat_member(Var.UPDATES_CHANNEL, m.chat.id)
-             if user.status == "banned":
-                 await b.send_message(
-                     chat_id=m.chat.id,
-                     text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
-                     disable_web_page_preview=True
-                 )
-                 return
-         except UserNotParticipant:
-             await b.send_message(
-                 chat_id=m.chat.id,
-                 text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
-                 reply_markup=InlineKeyboardMarkup(
-                     [
-                         [
-                           InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
-                         ]
-                     ]
-                 )
+    if Var.UPDATES_CHANNEL is not None:
+        try:
+            user = await bot.get_chat_member(Var.UPDATES_CHANNEL, message.chat.id)
+            if user.status == "banned":
+                await bot.send_message(
+                    chat_id=message.chat.id,
+                    text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
                     
+                    disable_web_page_preview=True
                 )
-             return
-         except Exception:
-             await b.send_message(
-                 chat_id=m.chat.id,
-                 text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
-                    
-                 disable_web_page_preview=True)
-             return
+                return
+        except UserNotParticipant:
+            await bot.send_message(
+                chat_id=message.chat.id,
+                text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
+                reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                        ]
+                    ]
+                )
+            )
+            return
+        except Exception:
+            await bot.send_message(
+                chat_id=message.chat.id,
+                text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
+                
+                disable_web_page_preview=True)
+            return
     await message.reply_photo(
             photo="https://graph.org/file/e276ceff64f464d4ef794.jpg",
             caption="""<b>sᴏᴍᴇ ʜɪᴅᴅᴇɴ ᴅᴇᴛᴀɪʟs😜</b>
