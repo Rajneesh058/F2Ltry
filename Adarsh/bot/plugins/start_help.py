@@ -55,6 +55,7 @@ async def start(b, m):
                     
                     disable_web_page_preview=True)
                 return
+              
         await m.reply_photo(
             photo="https://graph.org/file/e276ceff64f464d4ef794.jpg",
             caption="**ʜᴇʟʟᴏ...⚡\n\nɪᴀᴍ ᴀ sɪᴍᴘʟᴇ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ/ᴠɪᴅᴇᴏ ᴛᴏ ᴘᴇʀᴍᴀɴᴇɴᴛ ʟɪɴᴋ ᴀɴᴅ sᴛʀᴇᴀᴍ ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴏʀ ʙᴏᴛ.**\n\n**ᴜsᴇ /help ғᴏʀ ᴍᴏʀᴇ ᴅᴇᴛsɪʟs\n\nsᴇɴᴅ ᴍᴇ ᴀɴʏ ᴠɪᴅᴇᴏ / ғɪʟᴇ ᴛᴏ sᴇᴇ ᴍʏ ᴘᴏᴡᴇʀᴢ...**",
@@ -142,34 +143,34 @@ async def help_handler(bot, message):
      if Var.UPDATES_CHANNEL is not None:
          try:
              user = await b.get_chat_member(Var.UPDATES_CHANNEL, m.chat.id)
-                if user.status == "banned":
-                    await b.send_message(
-                        chat_id=m.chat.id,
-                        text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
-                        disable_web_page_preview=True
-                    )
-                    return
-            except UserNotParticipant:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
-                            ]
-                        ]
-                    )
+             if user.status == "banned":
+                 await b.send_message(
+                     chat_id=m.chat.id,
+                     text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
+                     disable_web_page_preview=True
+                 )
+                 return
+         except UserNotParticipant:
+             await b.send_message(
+                 chat_id=m.chat.id,
+                 text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
+                 reply_markup=InlineKeyboardMarkup(
+                     [
+                         [
+                            InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                         ]
+                     ]
+                 )
                     
-                )
-                return
-            except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
+             )
+             return
+         except Exception:
+             await b.send_message(
+                 chat_id=m.chat.id,
+                 text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
                     
-                    disable_web_page_preview=True)
-                return
+                 disable_web_page_preview=True)
+             return
     await message.reply_photo(
             photo="https://graph.org/file/e276ceff64f464d4ef794.jpg",
             caption="**┣⪼ sᴇɴᴅ ᴍᴇ ᴀɴʏ ғɪʟᴇ/ᴠɪᴅᴇᴏ ᴛʜᴇɴ ɪ ᴡɪʟʟ ʏᴏᴜ ᴘᴇʀᴍᴀɴᴇɴᴛ sʜᴀʀᴇᴀʙʟᴇ ʟɪɴᴋ ᴏғ ɪᴛ...\n\n┣⪼ ᴛʜɪs ʟɪɴᴋ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴏʀ ᴛᴏ sᴛʀᴇᴀᴍ ᴜsɪɴɢ ᴇxᴛᴇʀɴᴀʟ ᴠɪᴅᴇᴏ ᴘʟᴀʏᴇʀs ᴛʜʀᴏᴜɢʜ ᴍʏ sᴇʀᴠᴇʀs.\n\n┣⪼ ғᴏʀ sᴛʀᴇᴀᴍɪɴɢ ᴊᴜsᴛ ᴄᴏᴘʏ ᴛʜᴇ ʟɪɴᴋ ᴀɴᴅ ᴘᴀsᴛᴇ ɪᴛ ɪɴ ʏᴏᴜʀ ᴠɪᴅᴇᴏ ᴘʟᴀʏᴇʀ ᴛᴏ sᴛᴀʀᴛ sᴛʀᴇᴀᴍɪɴɢ.\n\n┣⪼ ᴛʜɪs ʙᴏᴛ ɪs ᴀʟsᴏ sᴜᴘᴘᴏʀᴛ ɪɴ ᴄʜᴀɴɴᴇʟ. ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴀs ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ʀᴇᴀʟᴛɪᴍᴇ ᴅᴏᴡɴʟᴏᴀᴅ ʟɪɴᴋ ғᴏʀ ᴇᴠᴇʀʏ ғɪʟᴇs/ᴠɪᴅᴇᴏs ᴘᴏsʏ../\n\n┣⪼ ғᴏʀ ᴍᴏʀᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ :- /about\n\n\nᴘʟᴇᴀsᴇ sʜᴀʀᴇ ᴀɴᴅ sᴜʙsᴄʀɪʙᴇ**", 
@@ -195,34 +196,34 @@ async def about_handler(bot, message):
      if Var.UPDATES_CHANNEL is not None:
          try:
              user = await b.get_chat_member(Var.UPDATES_CHANNEL, m.chat.id)
-                if user.status == "banned":
-                    await b.send_message(
-                        chat_id=m.chat.id,
-                        text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
-                        disable_web_page_preview=True
-                    )
-                    return
-            except UserNotParticipant:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
-                    reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
-                            ]
-                        ]
-                    )
+             if user.status == "banned":
+                 await b.send_message(
+                     chat_id=m.chat.id,
+                     text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
+                     disable_web_page_preview=True
+                 )
+                 return
+         except UserNotParticipant:
+             await b.send_message(
+                 chat_id=m.chat.id,
+                 text="**ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ  ᴍᴇ..**\n\n**ᴅᴜᴇ ᴛᴏ ᴏᴠᴇʀʟᴏᴀᴅ ᴏɴʟʏ ᴄʜᴀɴɴᴇʟ sᴜʙsᴄʀɪʙᴇʀs ᴄᴀɴ ᴜsᴇ ᴍᴇ..!**",
+                 reply_markup=InlineKeyboardMarkup(
+                     [
+                         [
+                           InlineKeyboardButton("🔰 ᴊᴏɪɴ ᴏᴜʀ ᴜᴩᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🔰", url=f"https://t.me/{Var.UPDATES_CHANNEL}")
+                         ]
+                     ]
+                 )
                     
                 )
-                return
-            except Exception:
-                await b.send_message(
-                    chat_id=m.chat.id,
-                    text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
+             return
+         except Exception:
+             await b.send_message(
+                 chat_id=m.chat.id,
+                 text="**𝙰𝙳𝙳 𝙵𝙾𝚁𝙲𝙴 𝚂𝚄𝙱 𝚃𝙾 𝙰𝙽𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻**",
                     
-                    disable_web_page_preview=True)
-                return
+                 disable_web_page_preview=True)
+             return
     await message.reply_photo(
             photo="https://graph.org/file/e276ceff64f464d4ef794.jpg",
             caption="""<b>sᴏᴍᴇ ʜɪᴅᴅᴇɴ ᴅᴇᴛᴀɪʟs😜</b>
